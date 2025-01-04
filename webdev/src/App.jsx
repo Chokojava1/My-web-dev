@@ -1,0 +1,12 @@
+import { useState } from 'react';
+import './App.css';
+import './Homepage';
+import Homepage from './Homepage';
+
+function App() {
+  return (
+    <Homepage></Homepage>
+  )
+}
+
+export default App
