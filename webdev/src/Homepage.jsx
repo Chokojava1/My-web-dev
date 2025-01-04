@@ -6,8 +6,8 @@ import logo from './assets/Logo.png';
 
 const Homepage = () => {
     return (
-        <div className="container">
-           {/*} <nav className="navbar">
+        <div className="homeContainer">
+            <nav className="navbar">
                 <div className="navbar-logo">
                     <img src={logo} alt="VibeWall" />
                 </div>
@@ -24,14 +24,16 @@ const Homepage = () => {
             </nav>
 
             <section className="carousel-section">
-                
+                <Carousel />
             </section>
 
             <section className="product-section">
-               
-            </section>*/}
+                <section className='sec1'>
+                <Product />
+                </section>
+     
+            </section>
         </div>
     );
 };
-
 export default Homepage;

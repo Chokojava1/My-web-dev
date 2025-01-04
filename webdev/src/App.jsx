@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import './App.css';
-import './Homepage';
-import Homepage from './Homepage';
+import { useState } from 'react'
+import './Homepage'
+import Homepage from './Homepage'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <Homepage></Homepage>
   )

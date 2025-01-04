@@ -1,21 +1,100 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Sour Gummy", "Verela Round", "consolas", sans-serif;
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px 40px;
+    background-color: #2C2C2C;
+    color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-body {
+.navbar-logo img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px; 
+}
+
+.navbar-links {
+    display: flex;
+    gap: 30px; 
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links a {
+    color: #ffffff;
+    display: flex;
+    justify-content: left;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    text-decoration: underline;
+    color: #FFD700;
+}
+
+.search-bar {
     display: flex;
     align-items: center;
-    justify-content: center;
+    background-color: #444444;
+    border-radius: 25px;
+    padding: 8px 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-left: 10px;
 }
-.container {
-    width: 100vw;
+
+.search-bar input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.search-bar button {
+    background-color: #FFD700;
+    border: none;
+    color: #2C2C2C;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #FFC107;
+}
+
+.carousel-section {
+    width: 100%;
+    height: 60vh;
+    margin-top: 10px;
+    position: relative;
+}
+
+.product-section {
+    width: 100%;
     height: 100vh;
-    justify-content: center;
-    background: url('./assets/background.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-  }
+    margin-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+.product-section, .sec1{
+    margin-top: 50px;
+    width: 100%;
+    gap:10px;
+    padding: 20px;
+}
