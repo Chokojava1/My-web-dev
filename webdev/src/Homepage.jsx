@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import './Homepage.css';
 import Carousel from './Carousel';
 import Product from './Products';
 import logo from './assets/Logo.png';
+import CartLogo from './assets/cart.png'; // Import cart image
 
 const Homepage = () => {
     const aboutRef = useRef(null);
@@ -20,14 +21,15 @@ const Homepage = () => {
                     <img src={logo} alt="VibeWall" />
                 </div>
                 <ul className="navbar-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/album">Album</a></li>
-                    <li><a href="#about" onClick={scrollToAbout}>About</a></li>
-                    <li><Link to="/login">Login</Link></li> {/* Updated to use Link */}
+                    <li><Link to="/">Home</Link></li> {/* Home link is fine with Link */}
+                    <li><Link to="/album">Album</Link></li> {/* Use Link for Album page */}
+                    <li><a href="#about" onClick={scrollToAbout}>About</a></li> {/* Keep anchor tag for scrolling to About */}
+                    <li><Link to="/login">Login</Link></li> {/* Login link */}
                 </ul>
-                <div className="search-bar">
-                    <input type="text" placeholder="Search albums..." />
-                    <button>Search</button>
+                <div className="cart-icon">
+                    <Link to="/cart">
+                        <img src={CartLogo} alt="Cart" className="cart-logo" />
+                    </Link>
                 </div>
             </nav>
 

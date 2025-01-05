@@ -1,8 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom'; 
 import './ProductDetails.css';
-
-
 import product1 from './assets/product1.jpg';
 import product2 from './assets/product2.jpg';
 import product3 from './assets/product 3.jpg';
@@ -11,8 +9,10 @@ import product5 from './assets/product5.jpg';
 import product6 from './assets/product6.jpg';
 import product7 from './assets/product7.jpg';
 import product8 from './assets/product8.jpg';
+
 const ProductDetails = () => {
     const { productID } = useParams(); 
+    const navigate = useNavigate(); 
 
     const products = [
         { productID: 1, productName: 'Feel My Rythm - Red Velvet', productPrice: '₱600.00', description: 'A vibrant and energetic album by Red Velvet with upbeat tracks.', productImage: product1 },
@@ -32,21 +32,25 @@ const ProductDetails = () => {
     }
 
     return (
-        <div className="product-details-container">
-            <div className="product-detail-header">
-                <h2>{product.productName}</h2>
-                <p className="product-price">{product.productPrice}</p>
-            </div>
-            <div className="product-detail-body">
-                <img src={product.productImage} alt={product.productName} className="product-detail-image" />
+        <div className="main-body">
+            <button className="back-button" onClick={() => navigate('/')}>Back to Homepage</button>
+            
+            <div className="product-details-container">
+                <div className="product-detail-body">
+                    <img src={product.productImage} alt={product.productName} className="product-detail-image" />
+                </div>
+                <div className="product-detail-header">
+                    <h2>{product.productName}</h2>
+                    <p className="product-price">{product.productPrice}</p>
+                </div>
                 <div className="product-description">
                     <h3>Description:</h3>
                     <p>{product.description}</p>
                 </div>
-            </div>
-            <div className="button-container">
-                <button className="buy-now-button">Buy Now</button>
-                <button className="add-to-cart">Add to Cart</button>
+                <div className="button-container">
+                    <button className="buy-now-button">Buy Now</button>
+                    <button className="add-to-cart">Add to Cart</button>
+                </div>
             </div>
         </div>
     );

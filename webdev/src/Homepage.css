@@ -45,39 +45,23 @@
     color: #FFD700;
 }
 
+/* Remove Search Bar Styling */
 .search-bar {
+    display: none;
+}
+
+/* Cart Icon Styles */
+.cart-icon {
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: #444444;
-    border-radius: 25px;
-    padding: 8px 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    margin-left: 10px;
-}
-
-.search-bar input {
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    outline: none;
-    padding: 5px 10px;
-    font-size: 16px;
-    width: 200px;
-}
-
-.search-bar button {
-    background-color: #FFD700;
-    border: none;
-    color: #2C2C2C;
-    padding: 8px 15px;
-    margin-left: 10px;
+    padding: 0 20px;
     cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
 }
 
-.search-bar button:hover {
-    background-color: #FFC107;
+.cart-logo {
+    width: 30px; 
+    height: auto; 
 }
 
 .carousel-section {
@@ -94,12 +78,14 @@
     display: flex;
     justify-content: left;
 }
-.product-section, .sec1{
+
+.product-section, .sec1 {
     margin-top: 50px;
     width: 100%;
-    gap:10px;
+    gap: 10px;
     padding: 20px;
 }
+
 .about-section {
     background-color: #2C2C2C;
     color: #ffffff; 
