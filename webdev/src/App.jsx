@@ -1,13 +1,19 @@
-import { useState } from 'react'
-import './Homepage'
-import Homepage from './Homepage'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Homepage from './Homepage';
+import Login from './Login'; 
+import ProductDetails from './ProductDetails'; 
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/product/:productID" element={<ProductDetails />} /> 
+            </Routes>
+        </Router>
+    );
+};
 
-  return (
-    <Homepage></Homepage>
-  )
-}
-
-export default App
+export default App;

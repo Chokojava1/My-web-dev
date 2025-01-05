@@ -32,10 +32,12 @@
     color: #ffffff;
     display: flex;
     justify-content: left;
+    align-items: center;
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .navbar-links a:hover {
@@ -98,3 +100,48 @@
     gap:10px;
     padding: 20px;
 }
+.about-section {
+    background-color: #2C2C2C;
+    color: #ffffff; 
+    padding: 50px 20px;
+    text-align: center;
+    border-top: 2px solid #333;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #FFD700; 
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+}
+
+.footer {
+    background-color: #2C2C2C;
+    color: #ffffff;
+    padding: 20px 10px;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #444;
+}
+
+.footer a {
+    color: #FFD700; 
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
